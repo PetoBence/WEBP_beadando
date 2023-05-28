@@ -9,7 +9,14 @@
 </thead>
 <tbody>
 <?php
-        $conn = mysqli_connect("localhost", "root", "", "adatbazis");
+		define("DB_SERVER", "mysql.nethely.hu");
+		define("DB_USER", "adatbazis1993");
+		define("DB_PASSWORD", "jelszo999");
+		define("DB_DATABASE", "adatbazis1993");
+		define("DB_PORT", "3306");
+		define("DB_SOCKET", "mysql.omega");
+		
+		$conn = new mysqli(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE, DB_PORT, DB_SOCKET);
 
         if($conn === false){
             die("ERROR: Could not connect. "
